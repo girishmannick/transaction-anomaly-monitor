@@ -415,11 +415,6 @@ def live_view(mode):
 
 # ------------------------------------------------------------------ page
 st.title("📈 Transaction Anomaly Monitor")
-st.markdown("<span class='muted'>Detects unusual spikes, drops and approval-rate collapses in merchant payments, "
-            "then explains the likely cause and what to do. Built on the work-placement anomaly-detection project "
-            "(robust z-score · rolling decomposition · Isolation Forest · approval-collapse detector).</span>",
-            unsafe_allow_html=True)
-
 src = st.sidebar.radio("Data source", ["📁 Upload a file", "🧪 Project sample data", "📡 Live feed (simulated)", "🌐 Live feed (from a URL)"])
 if src == "📁 Upload a file":
     up = st.file_uploader("Upload payment data (CSV, Excel, JSON or Parquet)", type=["csv", "xlsx", "xls", "json", "parquet"])
